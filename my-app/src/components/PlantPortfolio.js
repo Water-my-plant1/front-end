@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import PlantsCard from './PlantsCard'
-import axiosWithAuth from './utils/axiosWithAuth'
+import axiosWithAuth from './axiosWithAuth'
 import AddPlant from './addplant'
 
 const PlantPortfolio = () => {
@@ -39,4 +39,4 @@ const PlantPortfolio = () => {
     </div>
   )
 }
-export default PlantsPortfolio; 
+export default PlantPortfolio; 

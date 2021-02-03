@@ -1,14 +1,13 @@
 import React, { useState } from "react";
-import axiosWithAuth from "./utils/axiosWithAuth"
+import axiosWithAuth from "./axiosWithAuth"
 
 
-const createaccount = (props) => {
+const CreateAccount = (props) => {
 
   const [credentials, setCredentials] = useState({
     username: "",
     password: "",
-    phonenumber: "",
-
+    phonenumber: ""
   });
 
   const handleChange = (e) => {
@@ -60,4 +59,4 @@ const createaccount = (props) => {
   );
 };
 
-export default createaccount; 
+export default CreateAccount; 

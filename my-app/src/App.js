@@ -2,8 +2,8 @@ import './App.css';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
 import "./styles.css"
 
-import Login from './components/Login'
-import createaccount from './components/createaccount'
+import Login from './components/login'
+import CreateAccount from './components/CreateAccount'
 
 import PlantPortfolio from "./components/PlantPortfolio"
 import PrivateRoute from "./components/PrivateRoute"
@@ -25,10 +25,10 @@ function App() {
         </ul>
 
         <Switch>
-          <PrivateRoute path='/protected' component={FriendsList} />
+          <PrivateRoute path='/protected' component={PlantPortfolio} />
 
           <Route path='/login' component={Login} />
-          <Route path='/createaccount' component={createaccount} />
+          <Route path='/createaccount' component={CreateAccount} />
 
           <Route component={Login} />
         </Switch>
