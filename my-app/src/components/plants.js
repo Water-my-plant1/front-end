@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import PlantsCard from './PlantsCard'
 import axiosWithAuth from '../utils/axiosWithAuth'
-import AddFriends from './AddFriends'
+import AddPlant from './addplant'
 
 const plantPortfolio = () => {
   const [plants, setPlants] = useState([])
