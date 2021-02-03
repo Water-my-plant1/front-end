@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
 import "./styles.css"
@@ -6,7 +5,7 @@ import "./styles.css"
 import Login from './components/Login'
 import createaccount from './components/createaccount'
 
-import FriendsList from "./components/FriendsList"
+import PlantPortfolio from "./components/PlantPortfolio"
 import PrivateRoute from "./components/PrivateRoute"
 
 function App() {
