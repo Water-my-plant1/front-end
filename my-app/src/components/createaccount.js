@@ -23,7 +23,7 @@ const CreateAccount = (props) => {
     setCredentials({username:"",password:"",phonenumber: "",})
 
    axiosWithAuth()
-   .post('/register',credentials)
+   .post('/api/users/register',credentials)
     .then(res =>{
       window.localStorage.setItem('token',res.data.payload)
       props.history.push("/protected")

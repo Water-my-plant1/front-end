@@ -7,12 +7,11 @@ const PlantPortfolio = () => {
   const [plants, setPlants] = useState([])
 
   const addNewPlants = item => {
-    const newPlant = {
-      id: Date.now(),
-      name: item.name,
-      species: item.species,
-      h2oFrequency : item.h2oFrequency
-    }
+
+      axiosWithAuth()
+        .post(`/api/plants/`, item)
+        .catch(err => console.log(err))
+     
   setPlants([
     ...plants,newPlant
   ])
@@ -20,7 +19,7 @@ const PlantPortfolio = () => {
 
   useEffect(() => {
     axiosWithAuth()
-      .get('/plants', {})
+      .get('/api/plants/', {})
       .then(res => {
         setPlants(res.data)
         console.log(res.data)

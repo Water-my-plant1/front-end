@@ -10,7 +10,7 @@ const AddPlant = (props) => {
   const handleChange = e => {
     setPlant({
       ...plant,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     })
   }
 
