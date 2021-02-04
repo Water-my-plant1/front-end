@@ -7,7 +7,7 @@ import styled from 'styled-components'
 const AddPlant = (props) => {
 
   const [plant, setPlant] = useState({
-    name: '',
+    nickname: '',
     species: '',
     h2oFrequency: ''
   })
@@ -33,8 +33,8 @@ const AddPlant = (props) => {
         <input
           type='text'
           placeholder='Name'
-          name='name'
-          value={plant.name}
+          name='nickname'
+          value={plant.nickname}
           onChange={handleChange}
         />
         <LogText>Species</LogText>

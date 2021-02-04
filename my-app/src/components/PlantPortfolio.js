@@ -8,18 +8,18 @@ const PlantPortfolio = () => {
 
   const addNewPlants = item => {
 
+      setPlants([...plants, item]);
+
       axiosWithAuth()
-        .post(`/api/plants/`, item)
+        .post(`/api/plants/`, item,)
+        .then()
         .catch(err => console.log(err))
      
-  setPlants([
-    ...plants
-  ])
   }
 
   useEffect(() => {
     axiosWithAuth()
-      .get('/api/plants/', {})
+      .get('/api/plants/', {},)
       .then(res => {
         setPlants(res.data)
         console.log(res.data)
