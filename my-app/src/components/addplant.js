@@ -1,4 +1,8 @@
 import React, { useState } from 'react'
+import styled from 'styled-components'
+
+
+
 
 const AddPlant = (props) => {
 
@@ -23,8 +27,9 @@ const AddPlant = (props) => {
     }
 
   return (
-    <div>
+    <div className='friends-container'>
       <form onSubmit ={addplant}>
+        <LogText>Name</LogText>
         <input
           type='text'
           placeholder='Name'
@@ -32,6 +37,7 @@ const AddPlant = (props) => {
           value={plant.name}
           onChange={handleChange}
         />
+        <LogText>Species</LogText>
         <input
           type='text'
           placeholder='species'
@@ -39,6 +45,7 @@ const AddPlant = (props) => {
           value={plant.species}
           onChange={handleChange}
         />
+        <LogText>H20 Frequency</LogText>
         <input
           type='text'
           placeholder='h2oFrequency'
@@ -46,9 +53,22 @@ const AddPlant = (props) => {
           value={plant.h2oFrequency}
           onChange={handleChange}
         />
-        <button>Add Plant</button>
+        <Button>Add Plant</Button>
       </form>
     </div>
   )
 }
 export default AddPlant; 
+
+const LogText = styled.p`
+  color: white;
+  text-align: left
+  `
+  const Button = styled.button`
+  font-size: 1em;
+  margin: .5em;
+  padding: 0.25em 1em;
+  border: 2px solid;
+  border-radius: 350px;
+
+  `

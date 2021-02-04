@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
 import "./styles.css"
 
 import Login from './components/login'
-import CreateAccount from './components/CreateAccount'
+import CreateAccount from './components/createaccount'
 
 import PlantPortfolio from "./components/PlantPortfolio"
 import PrivateRoute from "./components/PrivateRoute"

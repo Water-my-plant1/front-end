@@ -13,7 +13,7 @@ const PlantPortfolio = () => {
         .catch(err => console.log(err))
      
   setPlants([
-    ...plants,newPlant
+    ...plants
   ])
   }
 
