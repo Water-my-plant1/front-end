@@ -1,6 +1,7 @@
 .App {
     font-family: sans-serif;
     text-align: center;
+    
   }
   body {
     overflow-x: hidden;
@@ -39,14 +40,21 @@
     margin: 0 0 36px;
     padding: 12px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    background-color:#263650 ;
   }
 
   li {
     list-style: none;
     margin-right: 50px;
-    color: #204963;
-    padding: 30px;
+    padding: 10px;
+    
   }
+  .crea{ color: white}
+  .log{color: white}
+  .fri{color: white}
+
+
+  
 
   a {
     text-decoration: none;

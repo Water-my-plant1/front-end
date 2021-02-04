@@ -14,13 +14,13 @@ function App() {
       <div className='App'>
         <ul>
           <li>
-            <Link to='/login'>Login</Link>
+            <Link className='log' to='/login'>Login</Link>
           </li>
           <li>
-            <Link to='/createaccount'>Create Account</Link>
+            <Link className= 'crea' to='/createaccount'>Create Account</Link>
           </li>
           <li>
-            <Link to='/protected'>Friends</Link>
+            <Link className='fri' to='/protected'>Friends</Link>
           </li>
         </ul>
 
