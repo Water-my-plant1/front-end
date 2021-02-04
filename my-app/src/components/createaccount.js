@@ -8,7 +8,7 @@ const CreateAccount = (props) => {
   const [credentials, setCredentials] = useState({
     username: "",
     password: "",
-    phonenumber: ""
+    phone: ""
   });
 
   const handleChange = (e) => {
@@ -21,7 +21,7 @@ const CreateAccount = (props) => {
 
   const create =e=>{
     e.preventDefault();
-    setCredentials({username:"",password:"",phonenumber: "",})
+    setCredentials({username:"",password:"",phone: "",})
 
    axiosWithAuth()
    .post('/api/users/register',credentials)
@@ -53,8 +53,8 @@ const CreateAccount = (props) => {
         <LogText>Phone Number</LogText>
           <input
           type="text"
-          name="phonenumber"
-          value={credentials.phonenumber}
+          name="phone"
+          value={credentials.phone}
           onChange={handleChange}
         />
         <Button>Create Account</Button>
