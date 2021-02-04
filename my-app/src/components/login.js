@@ -26,7 +26,7 @@ const Login = (props) => {
    axiosWithAuth()
    .post('/api/users/login',credentials)
     .then(res =>{
-      window.localStorage.setItem('token',res.data.payload)
+      window.localStorage.setItem('token',res.data.token)
       props.history.push("/protected")
     })
 
