@@ -15,7 +15,7 @@ const EditPlant = () => {
         console.log(res.data)
       })
       .catch(err => console.log(err))
-  }, [])
+  }, [id])
 
   const [plant, setPlants] = useState({
 
