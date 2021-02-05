@@ -10,7 +10,7 @@ const PlantsCard =({plant})=>{
             <p> Species:{plant.species}</p>
             <p> h2oFrequency:{plant.h2oFrequency}</p> 
 
-            <Link to= {`/Edit/${plant.id}`}>Edit</Link>
+            <button><Link to= {`/Edit/${plant.id}`}>Edit</Link></button>
 
         </div>
     )
