@@ -71,7 +71,7 @@ const EditPlant = () => {
           value={plant.h2oFrequency}
           onChange={handleChange}
         />
-        <Button>Add Plant</Button>
+        <Button>Update</Button>
       </form>
     </div>
   )
