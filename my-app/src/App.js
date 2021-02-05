@@ -7,9 +7,11 @@ import CreateAccount from './components/createaccount'
 
 import PlantPortfolio from "./components/PlantPortfolio"
 import PrivateRoute from "./components/PrivateRoute"
+import EditPlant from './components/EditPlant';
 
 function App() {
   return (
+
     <Router>
       <div className='App'>
         <ul>
@@ -20,7 +22,7 @@ function App() {
             <Link to='/createaccount'>Create Account</Link>
           </li>
           <li>
-            <Link to='/protected'>Friends</Link>
+            <Link to='/protected'>Plants</Link>
           </li>
         </ul>
 
@@ -29,6 +31,8 @@ function App() {
 
           <Route path='/login' component={Login} />
           <Route path='/createaccount' component={CreateAccount} />
+          <Route path='/Edit/:id' component={EditPlant} />
+
 
           <Route component={Login} />
         </Switch>
