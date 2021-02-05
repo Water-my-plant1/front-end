@@ -51,7 +51,7 @@
   }
   .crea{ color: white}
   .log{color: white}
-  .fri{color: white}
+  .pla{color: white}
 
 
   
@@ -102,4 +102,11 @@
     background-color: #204963;
     border: 1px solid white;
     border-radius: 5px;
+  }
+
+  .friend-container{
+    margin: 0 40%;
+    background-color: #204963;
+    border-radius: 20px;
+    color: white;
   }

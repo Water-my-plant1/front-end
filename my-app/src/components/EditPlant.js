@@ -1,34 +1,52 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
+import axiosWithAuth from './axiosWithAuth'
+import { useParams } from 'react-router-dom'
 
+const EditPlant = () => {
 
+  const {id} = useParams();
 
+  useEffect(() => {
+    axiosWithAuth()
+      .get(`/api/plants/${id}`, {},)
+      .then(res => {
+        setPlants(res.data)
+        console.log(res.data)
+      })
+      .catch(err => console.log(err))
+  }, [])
 
-const AddPlant = (props) => {
+  const [plant, setPlants] = useState({
 
-  const [plant, setPlant] = useState({
-    nickname: '',
-    species: '',
-    h2oFrequency: ''
+      nickname: "",
+      species: "",
+      h2oFrequency: ""
+
   })
+
   const handleChange = e => {
-    setPlant({
+    setPlants({
       ...plant,
       [e.target.name]: e.target.value,
     })
   }
 
-
-    const addplant = e =>{
+    const updateplant = e =>{
 
         e.preventDefault();
         
-        props.addNewPlants(plant)
+        axiosWithAuth()
+        .put(`/api/plants/${id}`, plant)
+        .then()
+        .catch(err => console.log(err))
     }
+
+  
 
   return (
     <div className='friends-container'>
-      <form onSubmit ={addplant}>
+      <form onSubmit ={updateplant}>
         <LogText>Name</LogText>
         <input
           type='text'
@@ -53,12 +71,12 @@ const AddPlant = (props) => {
           value={plant.h2oFrequency}
           onChange={handleChange}
         />
-        <Button>Add Plant</Button>
+        <Button>Update</Button>
       </form>
     </div>
   )
 }
-export default AddPlant; 
+export default EditPlant; 
 
 const LogText = styled.p`
   color: white;

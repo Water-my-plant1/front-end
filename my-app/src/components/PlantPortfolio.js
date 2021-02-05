@@ -3,23 +3,28 @@ import PlantsCard from './PlantsCard'
 import axiosWithAuth from './axiosWithAuth'
 import AddPlant from './addplant'
 
+
 const PlantPortfolio = () => {
+
   const [plants, setPlants] = useState([])
 
-  const addNewPlants = item => {
 
-      axiosWithAuth()
-        .post(`/api/plants/`, item)
-        .catch(err => console.log(err))
+    //New Plant
+    const addNewPlants = item => {
+
+        setPlants([...plants, item]);
+
+        axiosWithAuth()
+          .post(`/api/plants/`, item,)
+          .then()
+          .catch(err => console.log(err))
+      
+    }
      
-  setPlants([
-    ...plants
-  ])
-  }
 
   useEffect(() => {
     axiosWithAuth()
-      .get('/api/plants/', {})
+      .get('/api/plants/', {},)
       .then(res => {
         setPlants(res.data)
         console.log(res.data)
@@ -35,6 +40,7 @@ const PlantPortfolio = () => {
         ))}
       </div>
       <AddPlant addNewPlants={addNewPlants} />
+
     </div>
   )
 }
